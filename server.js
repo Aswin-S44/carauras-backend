@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
-const dotenv = require("dotenv");
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 const cookieParser = require("cookie-parser");
 const userRouter = require("./src/routes/users/userRouter");
 const db = require("./config/db");

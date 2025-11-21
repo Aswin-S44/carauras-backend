@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const dotenv = require("dotenv");
+// const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const userRouter = require("./src/routes/users/userRouter");
 const db = require("./config/db");
@@ -38,7 +38,7 @@ var corsOptions = {
 };
 
 // Middlewares
-dotenv.config();
+// dotenv.config();
 app.use(cors(corsOptions));
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true }));
